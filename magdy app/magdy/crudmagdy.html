@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ORTHO MATIC</title>
+
+    <link href="magdysystem.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>ORTHO MATIC SYSTEM</h2>
+            <input type="date" name="DATE" id="date" />
+
+
+        </div>
+        <div class="inputs">
+            <input placeholder="DR الاسم" type="text" id="title">
+            <div class="select">
+                <label for="specialty">Specialty</label>
+                <select name="التخصص" id="specialty">
+                    <option>التخصص</option>
+                    <option value="عظام">عظام</option>
+                    <option value="جراحة">جراحة</option>
+                </select>
+                <label for="category1">category</label>
+                <select name="الفئة" id="category1">
+                    <option>الفئة</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+
+            <input placeholder="Phone رقم الهاتف " type="number">
+
+            <div class="clinic">
+                <input placeholder="عنوان عيادة 1" type="text" id="category">
+                <input placeholder="عنوان عيادة 2" type="text" id="clinic2">
+                <input placeholder="عنوان عيادة 3" type="text" id="clinic3">
+            </div>
+
+            <div class="time">
+                <label>Time1</label>
+                <input type="time" name="time1" id="time1">
+                <label>Time2</label>
+                <input type="time" name="time2" id="time2">
+                <label>Time3</label>
+                <input type="time" name="time3" id="time3">
+            </div>
+
+            <input placeholder="افضل موعد للزيارة" type="text" id="besttime">
+
+            <div class="hospital">
+                <input placeholder=" المستشفي 1" type="text" id="hospital1">
+                <input placeholder="المستشفي 2" type="text" id="hospital2">
+                <input placeholder="المستشفي 3" type="text" id="hospital3">
+            </div>
+
+            <div class="hospitaltime">
+                <label>Time1</label>
+                <input type="time" name="time4" id="time4">
+                <label>Time2</label>
+                <input type="time" name="time5" id="time5">
+                <label>Time3</label>
+                <input type="time" name="time6" id="time6">
+            </div>
+            <div class="notes">
+                <input placeholder="افضل موعد للزيارة" type="text" id="visit" />
+                <input placeholder="ملاحظات" type="text" id="notes1" />
+            </div>
+
+
+            <input placeholder="عدد الزيارات" type="number" id="count" />
+
+
+            <button id="submit">Create</button>
+        </div>
+
+
+
+
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">البحث بالاسم</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">البحث بالمنطقة</button>
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+            <table class="table">
+                <tr>
+                    <th>id</th>
+                    <th>الاسم</th>
+                    <th>التلفون</th>
+                    <th>عنوان العيادة1</th>
+                    <th>مواعيد العيادة1</th>
+                    <th>عنوان العيادة2</th>
+                    <th>مواعيد العيادة2</th>
+                    <th>عنوان العيادة3</th>
+                    <th>مواعيد العيادة3</th>
+                    <th>عنوان المستشفي1</th>
+                    <th>مواعيد المستشفي1</th>
+                    <th>عنوان المستشفي2</th>
+                    <th>مواعيد المستشفي2</th>
+                    <th>عنوان المستشفي3</th>
+                    <th>مواعيد المستشفي3</th>
+                    <th>افضل موعد للزيارة</th>
+                    <th>ملاحظات</th>
+                    <th>عدد الزيارات</th>
+
+
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+
+
+</body>
+</html>
